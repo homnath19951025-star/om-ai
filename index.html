@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om AI</title>
+  <style>
+    body {
+      background: #101827;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px 15px;
+    }
+    h1 { color: #8b9cff; }
+    .box {
+      max-width: 450px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #1e293b;
+      border-radius: 16px;
+    }
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: 0;
+      margin-bottom: 12px;
+    }
+    button {
+      padding: 12px 22px;
+      border: 0;
+      border-radius: 10px;
+      background: #6478ff;
+      color: white;
+      font-size: 16px;
+    }
+    #reply { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>🤖 Om AI</h1>
+  <p>Your Personal AI Assistant</p>
+  <div class="box">
+    <h2>Welcome!</h2>
+    <p>Namaste! Main Om AI hoon.</p>
+    <input id="question" placeholder="Type your message...">
+    <button onclick="reply()">Send</button>
+    <p id="reply"></p>
+  </div>
+  <script>
+    function reply() {
+      const q = document.getElementById("question").value.trim();
+      document.getElementById("reply").textContent =
+        q ? "Namaste! Aapne kaha: " + q : "Please type a message.";
+    }
+  </script>
+</body>
+</html>
